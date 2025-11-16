@@ -6,7 +6,7 @@ function SelectedNumbers({ selectedNumbers }) {
   return (
     <>
       <div className="box">
-        <h2 className="font bold">
+        <h2 className="font font-size bold">
           {numberKeys.join(" ") || "Please select numbers"}
         </h2>
       </div>
