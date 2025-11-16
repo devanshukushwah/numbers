@@ -1,8 +1,17 @@
 import React from "react";
+import "./SelectedNumbers.css";
 
 function SelectedNumbers({ selectedNumbers }) {
   const numberKeys = Object.keys(selectedNumbers).sort();
-  return <h2>{numberKeys.join(" ")}</h2>;
+  return (
+    <>
+      <div className="box">
+        <h2 className="font bold">
+          {numberKeys.join(" ") || "Please select numbers"}
+        </h2>
+      </div>
+    </>
+  );
 }
 
 export default SelectedNumbers;

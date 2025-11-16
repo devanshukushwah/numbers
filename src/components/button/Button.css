@@ -3,28 +3,24 @@
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 7.5px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   cursor: pointer;
   user-select: none;
   border-radius: 5px;
 }
 
+/* on hover make color bit highlight with same background color */
 .button:hover {
-  background-color: #45a049;
+  opacity: 0.8;
 }
 
 .button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
-}
-
-.button:active {
-  background-color: #3e8e41;
 }
 
 /* button onclick should srink */
@@ -33,7 +29,8 @@
 }
 
 /* for selected button make it look unique play with boarder and also with background color */
-.selected {
+.selected,
+.button:active {
   background-color: #add8e6;
 }
 

@@ -51,11 +51,13 @@ function App() {
   return (
     <>
       <SelectedNumbers selectedNumbers={selectedNumbers} />
+      <div className="spacer"></div>
       <div className="flex jcsb">
         <Button
           label="Copy"
           value={makeSelectedNumbersString()}
           onClick={copyToClipboard}
+          color="info"
         />
         <Button
           label="Reset"
@@ -63,7 +65,7 @@ function App() {
           onClick={handleResetSelectedNumbers}
         />
       </div>
-      <hr />
+      <div className="divider"></div>
       <div className="numbers-grid">
         {AppUtil.range(0, 99).map((number) => {
           const _2digitString = AppUtil.to2DigitString(number);
@@ -74,9 +76,19 @@ function App() {
               value={_2digitString}
               onClick={handleButtonClick}
               isSelected={selectedNumbers[_2digitString]}
+              style={{ padding: "0.4rem" }}
             />
           );
         })}
+      </div>
+      <div className="bottom-button">
+        <Button
+          label="Copy"
+          value={makeSelectedNumbersString()}
+          onClick={copyToClipboard}
+          color="info"
+          style={{ width: "100%" }}
+        />
       </div>
     </>
   );

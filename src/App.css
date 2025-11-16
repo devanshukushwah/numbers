@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 0.5rem;
+  overflow-y: auto;
 }
 
 .flex {
@@ -15,4 +16,9 @@
 
 .jcsb {
   justify-content: space-between;
+}
+
+.bottom-button {
+  margin-top: 1rem;
+  display: flex;
 }
